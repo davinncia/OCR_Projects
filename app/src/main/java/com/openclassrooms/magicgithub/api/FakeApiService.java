@@ -28,10 +28,9 @@ public class FakeApiService implements ApiService {
     @Override
     public void generateRandomUser() {
         // TODO: A modifier
-        //Generating a random number in fake_users_random range
-        int randomNumber = new Random().nextInt(FakeApiServiceGenerator.FAKE_USERS_RANDOM.size());
+        User randomUser = User.random();
         //Adding it to the list
-        users.add(FakeApiServiceGenerator.FAKE_USERS_RANDOM.get(randomNumber));
+        users.add(randomUser);
     }
 
     /**

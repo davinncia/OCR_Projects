@@ -33,8 +33,8 @@ public class UserRepositoryTest {
     
     @Test
     public void getUsersWithSuccess() {
-        List<User> usersActual = userRepository.getUsers();
         List<User> usersExpected = FAKE_USERS;
+        List<User> usersActual = userRepository.getUsers();
         assertThat(usersActual, containsInAnyOrder(usersExpected.toArray()));
     }
 
